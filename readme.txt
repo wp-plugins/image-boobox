@@ -1,6 +1,5 @@
 === image-boobox ===
 Contributors: boo-box
-Donate link: http://boo-box.com
 Tags: monetization, advertising
 Requires at least: 2.3
 Tested up to: 2.5
