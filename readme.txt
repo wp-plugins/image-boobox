@@ -21,12 +21,6 @@ This WordPress plugin automatically inserts boo-box links in the images in your 
 1. Copy the content of the archive into the WordPress plugin folder (/wp-content/plugins).
 1. Login to the administration page at WordPress, go into the Plugins page and activate "image-boobox". Still on the plugins page, select the "boo-box configuration" option and fill out the required fields under affiliate programs.
 
-== Frequently Asked Questions ==
-
-= I need to pay to use boo-box? =
-
-No.
-
 == Screenshots ==
 
 1. Plugin options in administration page at WordPress.
