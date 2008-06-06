@@ -46,16 +46,31 @@ if ( !function_exists('boo_config_submenu') ) {
 								<script type="text/javascript">
 									// receive JSONP request with affiliate data from boo-box master
 									function pushAffiliates(data) {
-										el = document.getElementById("boo_shopid");
+										select = document.getElementById("boo_shopid");
 										for (var i=0; i < data.shops.length; i++) {
 											shop = data.shops[i];
-											selected = ("<?php echo get_option('boo_shopid'); ?>" == shop.id) ? 'selected="selected"' : '';
+											
+											var option = document.createElement('option');
+											option.value = shop.id;
+											option.innerHTML = shop.name;
+											
+											// selected?
+											("<?php echo get_option('boo_shopid'); ?>" == shop.id) ? option.selected = "selected" : '';
+											
 											// just attach to #boo_shopid
-											el.innerHTML += "<option "+selected+" value="+shop.id+">"+shop.name+"</option>";
+											select.appendChild(option);
 										}
 									}
+									
+									var script = document.createElement('script');
+									script.src = 'http://stable.boo-box.com/config.php?format=json&mime=application/json&callback=pushAffiliates';
+									script.type = 'text/javascript';
+									script.defer = true;
+									
+									var head = document.getElementsByTagName('head').item(0);
+									head.appendChild(script);
+									
 								</script>
-								<script src="http://stable.boo-box.com/config.php?format=json&mime=application/json&callback=pushAffiliates" type="text/javascript"></script>
 							</td>
 						</tr>
 						<tr>

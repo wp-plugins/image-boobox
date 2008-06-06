@@ -3,7 +3,7 @@
 Plugin Name: Image boo-box
 Plugin URI: http://boo-box.com
 Description: Automatically places boo-box links on images. When the links are clicked on virtual shopping windows appear on top of the page showing offers from selected affiliate programs. Offers are placed accordingly to the alt="" or title="" attributes of the picture. Based on <a href="http://pauloduarte.com/projetos/plugin-wordpress-imagem-boo-box.html">Image boo-box</a> by <a href="http://pauloduarte.com/">Paulo Duarte</a>.
-Version: 0.2
+Version: 0.3
 Author: boo-box team
 Author URI: http://boo-box.com
 */
