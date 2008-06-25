@@ -42,11 +42,13 @@ if ( !function_exists('boo_config_submenu') ) {
 							</td>
 							<td>
 								<select name="boo_shopid" id="boo_shopid">
+									<option value="">Loading</option>
 								</select>
 								<script type="text/javascript">
 									// receive JSONP request with affiliate data from boo-box master
 									function pushAffiliates(data) {
 										select = document.getElementById("boo_shopid");
+										select.innerHTML = "";
 										for (var i=0; i < data.shops.length; i++) {
 											shop = data.shops[i];
 											
